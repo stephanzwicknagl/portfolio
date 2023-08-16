@@ -34,6 +34,7 @@ const StyledCardComponent = styled.div`
 `;
 
 export default function StyledCard({ image, name, description, url, demo }) {
+  if (name === "viasp") { demo = "https://mybinder.org/v2/gh/stephanzwicknagl/viasp/main?filepath=examples%2FIntroduction%20to%20viASP.ipynb"}
   return (
     <StyledCardComponent>
       <Card>

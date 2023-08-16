@@ -2,7 +2,8 @@
 import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
+import viaspLogo from "./images/repository-open-graph-template.jpg";
+import skypewLogo from "./images/skypewaddle.png";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -15,7 +16,7 @@ export { HeroDark as Dark };
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
 */
-export const githubUsername = "Your GitHub username here";
+export const githubUsername = "stephanzwicknagl";
 
 // Navbar Logo image
 export const navLogo = undefined;
@@ -28,7 +29,7 @@ export const Blog = <Icon icon="ph:link-bold" />;
   Add a second paragraph for the about me section.
 */
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "I am a recent graduate of Computational Science at the University of Potsdam, now based in the States. I specialize in Dashboard Creation an my thesis is about AI Explainability.";
 
 /* Skills
  ************************************************************** 
@@ -37,38 +38,23 @@ export const moreInfo =
 export const skillData = [
   {
     id: 1,
-    skill: <Icon icon="mdi:language-html5" className="display-4" />,
-    name: "HTML5",
+    skill: <Icon icon="teenyicons:python-outline" className="display-4" />,
+    name: "Python",
   },
   {
     id: 2,
-    skill: <Icon icon="ion:logo-css3" className="display-4" />,
-    name: "CSS3",
-  },
-  {
-    id: 3,
     skill: <Icon icon="fa6-brands:js" className="display-4" />,
     name: "JavaScript",
   },
   {
     id: 4,
-    skill: <Icon icon="ri:bootstrap-fill" className="display-4" />,
-    name: "BootStrap",
-  },
-  {
-    id: 5,
     skill: <Icon icon="mdi:react" className="display-4" />,
     name: "React",
   },
   {
     id: 6,
-    skill: <Icon icon="file-icons:styledcomponents" className="display-4" />,
-    name: "Styled Components",
-  },
-  {
-    id: 7,
-    skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
-    name: "Redux",
+    skill: <Icon icon="carbon:sql" className="display-4" />,
+    name: "SQL",
   },
   {
     id: 8,
@@ -76,9 +62,24 @@ export const skillData = [
     name: "Git",
   },
   {
+    id: 5,
+    skill: <Icon icon="logos:flask" className="display-4" />,
+    name: "Flask",
+  },
+  {
+    id: 7,
+    skill: <Icon icon="devicon-plain:keras-wordmark" className="display-4" />,
+    name: "Keras",
+  },
+  {
     id: 9,
-    skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
-    name: "GitHub",
+    skill: <Icon icon="simple-icons:tensorflow" className="display-4" />,
+    name: "Tensorflow",
+  },
+  {
+    id: 3,
+    skill: <Icon icon="devicon-plain:googlecloud-wordmark" className="display-4" />,
+    name: "Google Cloud",
   },
 ];
 
@@ -89,13 +90,18 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["example-1", "example-2", "example-3"];
+export const filteredProjects = ["viasp"];
+export const filteredProjects2 = ["skypewaddle"];
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 4-5)
 export const projectCardImages = [
   {
-    name: "example-1",
-    image: Logo,
+    name: "viasp",
+    image: viaspLogo
+  },
+  {
+    name: "skypewaddle",
+    image: skypewLogo
   },
 ];
 
@@ -104,4 +110,4 @@ export const projectCardImages = [
   Add your formspree endpoint below.
   https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = "https://formspree.io/f/xleyjvvl";

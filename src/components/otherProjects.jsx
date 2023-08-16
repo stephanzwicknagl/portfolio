@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 // Data
-import { filteredProjects } from "../data";
+import { filteredProjects2 } from "../data";
 // Icons
 import { Icon } from "@iconify/react";
 // Components
@@ -17,8 +17,8 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
 
-export default function Projects() {
-  const [mainProjects, setMainProjects] = React.useState([]);
+export default function OtherProjects() {
+  const [otherProjects, setOtherProjects] = React.useState([]);
   const { theme } = useAppContext();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -28,27 +28,27 @@ export default function Projects() {
     function () {
       const tempData = [];
       data.forEach((el, i) => (tempData[i] = Object.create(el)));
-      if (data.length !== 0 && filteredProjects.length !== 0) {
+      if (data.length !== 0 && filteredProjects2.length !== 0) {
         const tempArray = tempData.filter((obj) =>
-          filteredProjects.includes(obj.name)
+          filteredProjects2.includes(obj.name)
         );
         tempArray.length !== 0
-          ? setMainProjects([...tempArray])
-          : setMainProjects([...tempData.slice(0, 3)]);
+          ? setOtherProjects([...tempArray])
+          : setOtherProjects([...tempData.slice(0, 3)]);
       } else {
-        setMainProjects([...tempData.slice(0, 3)]);
+        setOtherProjects([...tempData.slice(0, 3)]);
       }
     },
     [data]
   );
 
   return (
-    <Element name={"Projects"} id="projects">
+    <Element name={"OtherProjects"} id="other-projects">
       <section className="section">
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>Projects</h2>
+              <h2>Some other Project I'm proud of</h2>
               <div className="underline"></div>
             </Title>
           </Container>
@@ -63,10 +63,10 @@ export default function Projects() {
               Oops, you do not have any GitHub projects yet...
             </h2>
           )}
-          {mainProjects.length !== 0 && (
+          {otherProjects.length !== 0 && (
             <>
               <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
-                {mainProjects.map(function ({
+                {otherProjects.map(function ({
                   id,
                   image,
                   name,
