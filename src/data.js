@@ -47,6 +47,16 @@ export const skillData = [
     name: "JavaScript",
   },
   {
+    id: 3,
+    skill: <Icon icon="simple-icons:googlecloud" className="display-4" />,
+    name: "Google Cloud",
+  },
+  {
+    id: 5,
+    skill: <Icon icon="simple-icons:flask" className="display-4" />,
+    name: "Flask",
+  },
+  {
     id: 4,
     skill: <Icon icon="mdi:react" className="display-4" />,
     name: "React",
@@ -62,24 +72,14 @@ export const skillData = [
     name: "Git",
   },
   {
-    id: 5,
-    skill: <Icon icon="logos:flask" className="display-4" />,
-    name: "Flask",
-  },
-  {
     id: 7,
-    skill: <Icon icon="devicon-plain:keras-wordmark" className="display-4" />,
+    skill: <Icon icon="devicon-plain:keras" className="display-4" />,
     name: "Keras",
   },
   {
     id: 9,
     skill: <Icon icon="simple-icons:tensorflow" className="display-4" />,
     name: "Tensorflow",
-  },
-  {
-    id: 3,
-    skill: <Icon icon="devicon-plain:googlecloud-wordmark" className="display-4" />,
-    name: "Google Cloud",
   },
 ];
 
